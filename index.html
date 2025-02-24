@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to My Profile</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .bg-gradient {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+    </style>
+</head>
+<body class="bg-gradient min-h-screen flex items-center justify-center">
+    <div class="text-center text-white">
+        <h1 class="text-5xl font-bold mb-4">Welcome to My Profile</h1>
+        <p class="text-xl mb-8">Thank you for visiting. I'm excited to share my work with you!</p>
+        <a href="app\profile\page.tsx" class="bg-white text-purple-700 font-bold py-2 px-4 rounded-full hover:bg-purple-100 transition duration-300">
+            Enter Site
+        </a>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const title = document.querySelector('h1');
+            const paragraph = document.querySelector('p');
+            const button = document.querySelector('a');
+
+            title.style.opacity = '0';
+            paragraph.style.opacity = '0';
+            button.style.opacity = '0';
+
+            setTimeout(() => {
+                title.style.transition = 'opacity 1s';
+                title.style.opacity = '1';
+            }, 300);
+
+            setTimeout(() => {
+                paragraph.style.transition = 'opacity 1s';
+                paragraph.style.opacity = '1';
+            }, 800);
+
+            setTimeout(() => {
+                button.style.transition = 'opacity 1s';
+                button.style.opacity = '1';
+            }, 1300);
+        });
+    </script>
+</body>
+</html>
+
